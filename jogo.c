@@ -59,7 +59,7 @@ int main()
 	system("cls");
 	SelecaoArmas(&j, &a);
 	ArmaduraInicial(&j);
-        printf("Voce possiu a armadura enferrujada");
+        printf("Voce ganhou: Armadura Enferrujada");
 	def = j.defesa;
 	vida = j.pv;
 	printf("Um inimgo apareceu");
@@ -100,7 +100,7 @@ int main()
 	j.pv = vida;
 	printf("Voce recuperou: Item 1");
         printf("\nVoce ganhou: Armadura Comum");
-        Armadura
+        ArmaduraMedia(&j);
 	printf("\n\nVoce avancou para o Segundo andar");
 	printf("\n\nPressione qualquer tecla para continuar: ");
 	scanf(" %c", &op);
@@ -137,6 +137,8 @@ int main()
 		exit(0);
 	}
 	printf("Voce recuperou: Item 1");
+        printf("Voce ganhou: Armadura Lendaria");
+        ArmaduraFinal(&j);
 	printf("\n\nVoce avancou para o Terceiro andar");
 	printf("\n\nPressione qualquer tecla para continuar: ");
 	scanf(" %c", &op);
