@@ -668,10 +668,6 @@ void Atributos2(jogador *um)
 
 
 
-void Jogo()
-{
-	printf("Continuou");
-}
 
 
 
@@ -732,7 +728,7 @@ void EspadaLeve(jogador *um, arma *h)
    	h->espadaLeve = ddanoel[0] + ddanoel[1] + ddanoel[2] + 5;
    	um->dano = h->espadaLeve;
    	
-   	printf("Dano espada leve:\n%d", h->espadaLeve);
+   	
 }
 
 void EspadaPesada(jogador *um, arma *h)
@@ -747,7 +743,7 @@ void EspadaPesada(jogador *um, arma *h)
 	h->espadaPesada = ddanoep + 10;
 	um->dano = h->espadaPesada;
 	
-	printf("\n\nDano espada pesada:\n%d", h->espadaPesada);
+	
 }
 
 
@@ -800,8 +796,7 @@ void MagiaAgua(jogador *um, arma *h)
 			h->agua = ddanoagua + (um->constituicao*1.5) - 0.5;
 		}
 	}
-	um->dano = h->agua;
-//	printf("\n\nDano final a: %d\nConstituicao: %d", h->agua, um->constituicao);
+	um->dano = h->agua;	
 }
 
 void MagiaFogo(jogador *um, arma *h)
@@ -831,7 +826,6 @@ void MagiaFogo(jogador *um, arma *h)
 		h->fogo = ddanofogo;
 	}
 	um->dano = h->fogo;
-	printf("\n\nDano final f: %d\nConstituicao: %d", h->fogo, um->constituicao);
 }
 
 void MagiaGelo(jogador *um, arma *h)
@@ -861,7 +855,6 @@ void MagiaGelo(jogador *um, arma *h)
 		h->gelo = ddanogelo;
 	}
 	um->dano = h->gelo;
-	printf("\n\nDano final g: %d\nConstituicao: %d\nDestreza: %d", h->gelo, um->constituicao, um->destreza);
 }
 
 void MagiaElectro(jogador *um, arma *h)
@@ -891,7 +884,6 @@ void MagiaElectro(jogador *um, arma *h)
 		h->electro = ddanoelectro;
 	}
 	um->dano = h->electro;
-	printf("\n\nDano final e: %d\nConstituicao: %d\nAgilidade: %d", h->electro, um->constituicao, um->agilidade);
 }
 
 
@@ -923,8 +915,6 @@ void ArcoLeve(jogador *um, arma *h)
    	
    	h->arcoLeve = ddanoal[0] + ddanoal[1] + ddanoal[2] + (um->destreza*1.25);
    	um->dano = h->arcoLeve;
-   	
-   	printf("Dano arco leve:\n%d", h->arcoLeve);
 }
 
 void ArcoPesado(jogador *um, arma *h)
@@ -938,8 +928,6 @@ void ArcoPesado(jogador *um, arma *h)
 	
 	h->arcoPesado = ddanoap + (um->destreza*0.5) + (um->forca*1.5);
 	um->dano = h->arcoPesado;
-	
-	printf("\n\nDano arco pesada:\n%d", h->arcoPesado);
 }
 
 
@@ -971,8 +959,6 @@ void FacaBolso(jogador *um, arma *h)
    	
    	h->facaBolso = ddanofb[0] + ddanofb[1] + ddanofb[2] + um->destreza + (um->agilidade*0.25);
    	um->dano = h->facaBolso;
-   	
-   	printf("\n\nDano faca de bolso: %d", h->facaBolso);
 }
 
 void FacaCombate(jogador *um, arma *h)
@@ -986,8 +972,6 @@ void FacaCombate(jogador *um, arma *h)
 	
 	h->facaCombate = ddanofc + (um->destreza*0.5) + (um->forca*1.5);
 	um->dano = h->facaCombate;
-	
-	printf("\n\nDano faca de combate:\n%d", h->facaCombate);
 }
 
 
